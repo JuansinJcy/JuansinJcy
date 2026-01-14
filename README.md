@@ -1,33 +1,44 @@
 Hola! 👋
 
-¡Qué tal, soy @JuansinJcy! Un desarrollador apasionado por la tecnología con un perfil diverso y dinámico.
+¡Qué tal, soy @JuansinJcy! Un desarrollador interesado por la tecnología con un perfil dinámico.
 
 👀 Intereses:
 
-Machine Learning
-Desarrollo web con CSS
+Aprendización automática
+Desarrollo web con CSS y HTML5
+Nube (AWS, Google Cloud, Azure)
+
 🌱 Actualmente aprendiendo:
 
 Python
 HTML
 C#
 C++
-GO
+IR
 PHP
+N8N
+¡VAMOS!
+Antigravity
+NotebookLM
+
 💞️ Colaboraciones:
-He trabajado en proyectos personales interesantes como:
+Él trabajó en proyectos personales interesantes como:
 
 Desarrollo de Agendas
-Creación de Páginas Web
+Creación de modelos de IA
+Automatización de procesos
+Sostenibilidad Ambiental
+
+
 📫 Contáctame:
 
 Correo: juansin0611@gmail.com
 😄 Pronombres:
 
-HE/ÉL
+ÉL/ÉL
 ⚡ Dato curioso:
-Al igual que Garfield, ¡detesto los lunes con toda mi alma! 😂
+Al igual que Garfield, ¡detesto los lunes! 
 <!---
-JuansinJcy/JuansinJcy is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
+JuansinJcy/JuansinJcy es un repositorio ✨ especial ✨ porque su `README.md` (este archivo) parece en su perfil de GitHub.
+Puede hacer clic en el enlace Vista previa para ver sus cambios.
 --->
