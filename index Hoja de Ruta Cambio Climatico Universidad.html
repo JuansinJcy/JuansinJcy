@@ -1,0 +1,770 @@
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hoja de Ruta Climática - Ugma en Accion - Universidad Gran Mariscal de Ayacucho</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Variables de color según la universidad */
+    :root {
+      --amarillo: #FFD700;
+      --azul-marino: #0b2340;
+      --azul-claro: #1261a0;
+      --blanco: #ffffff;
+      --amarillo-claro: #FFF9E6;;
+      --amarillo-medio: #FFEECC;
+      --texto: #213445;
+      --texto-claro: #4b6b87;
+    }
+
+    /* Reset y estilos base */
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      background: #FFEB3B;
+      color: var(--texto);
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #FFFEF5;
+      box-shadow: 0 10px 30px rgba(11, 35, 64, 0.1);
+      overflow: hidden;
+      border-radius: 0 0 12px 12px;
+    }
+
+    /* Encabezado */
+    header {
+      background: linear-gradient(135deg, var(--azul-marino), var(--azul-claro));
+      color: var(--blanco);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(90deg, 
+                  transparent, 
+                  transparent 20px, 
+                  rgba(255, 215, 0, 0.05) 20px, 
+                  rgba(255, 215, 0, 0.05) 40px);
+      pointer-events: none;
+    }
+
+    .university-badge {
+      display: inline-block;
+      background: var(--amarillo);
+      color: var(--azul-marino);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+	
+	.logos-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo-item {
+      flex: 0 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .header-text {
+      flex: 1;
+      text-align: center;
+      min-width: 300px;
+    }
+
+    .university-logo,
+    .project-logo {
+      max-height: 80px;
+      max-width: 150px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1); /* Hace los logos blancos para contraste */
+      transition: transform 0.3s ease;
+    }
+
+    .logo-caption {
+      font-size: 0.8rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .university-logo:hover,
+    .project-logo:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-table {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 0.7rem;
+      border-collapse: collapse;
+    }
+
+    .logo-table td, .logo-table th {
+      padding: 4px 8px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Responsive para logos */
+    @media (max-width: 768px) {
+      .logos-container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      .logo-item {
+        order: -1;
+      }
+      
+      .header-text {
+        order: 0;
+      }
+      
+      .university-logo,
+      .project-logo {
+        max-height: 60px;
+        max-width: 120px;
+      }
+      
+      .logo-item:last-child {
+        order: 1;
+      }
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    header .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Navegación de secciones clave */
+    .key-sections {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      padding: 1.5rem;
+      background: #FFF4D4; /* Amarillo cálido claro */
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .key-section-link {
+      background: var(--blanco);
+      color: var(--azul-claro);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(18, 97, 160, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .key-section-link i {
+      font-size: 0.8rem;
+    }
+
+    .key-section-link:hover {
+      background: var(--azul-claro);
+      color: var(--blanco);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(11, 35, 64, 0.1);
+    }
+
+    /* Contenido principal */
+    .content {
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(11, 35, 64, 0.08);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2.section-title {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: var(--azul-marino);
+      position: relative;
+      padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    h2.section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--amarillo);
+    }
+
+    h2.section-title i {
+      color: var(--amarillo);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .highlight {
+      background: rgba(255, 215, 0, 0.3);
+      border-left: 4px solid var(--amarillo);
+      padding: 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: #FFF7E0;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(11, 35, 64, 0.08);
+    }
+
+    .stat-value {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--azul-claro);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      color: var(--texto-claro);
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    ul li::before {
+      content: "•";
+      color: var(--amarillo);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2.5rem 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--amarillo);
+    }
+
+    .timeline-item {
+      margin-bottom: 2rem;
+      padding-left: 3rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--azul-marino);
+      border: 3px solid var(--amarillo);
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      color: var(--azul-marino);
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-content {
+      color: var(--texto);
+    }
+
+    /* Enlace al proyecto */
+    .project-link-container {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 160, 0.05));
+      border-radius: 12px;
+      margin: 2.5rem 0;
+	  border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--azul-claro);
+      color: var(--blanco);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(18, 97, 160, 0.3);
+    }
+
+    .project-link:hover {
+      background: var(--azul-marino);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(18, 97, 160, 0.4);
+    }
+
+    /* Pie de página */
+    footer {
+      padding: 2rem;
+      background: var(--azul-marino);
+      color: var(--blanco);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .university-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--amarillo);
+    }
+
+    .copyright {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 2rem 1.5rem;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .key-sections {
+        padding: 1.2rem;
+        gap: 0.6rem;
+      }
+      
+      .key-section-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+      
+      .content {
+        padding: 1.5rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .key-sections {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .key-section-link {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .section {
+        margin-bottom: 2rem;
+      }
+      
+      h2.section-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Contenedor para logos -->
+      <div class="logos-container">
+        <div class="logo-item">
+          <img src="Logo.svg" alt="Logo 1" class="university-logo">
+          <p class="logo-caption"></p>
+        </div>
+        
+        <div class="header-text">
+          <div class="university-badge">
+            <i class="fas fa-university"></i> Universidad Gran Mariscal de Ayacucho
+          </div>
+          <h1>Hoja de Ruta para la Acción Climática</h1>
+          <p class="subtitle">Un proyecto para reducir la huella de carbono y fortalecer la resiliencia en la educación superior venezolana</p>
+        </div>
+        
+        <div class="logo-item">
+          <img src="Logo.svg" alt="Logo del Proyecto" class="project-logo">
+          <p class="logo-caption"></p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="key-sections">
+      <a href="#cambio-climatico" class="key-section-link">
+        <i class="fas fa-globe-americas"></i> Cambio Climático
+      </a>
+      <a href="#huella-carbono" class="key-section-link">
+        <i class="fas fa-shoe-prints"></i> Huella de Carbono
+      </a>
+      <a href="#impacto" class="key-section-link">
+        <i class="fas fa-exclamation-triangle"></i> Impacto
+      </a>
+      <a href="#causas" class="key-section-link">
+        <i class="fas fa-industry"></i> Causas
+      </a>
+      <a href="#universidad" class="key-section-link">
+        <i class="fas fa-graduation-cap"></i> En la Universidad
+      </a>
+    </nav>
+
+    <div class="content">
+      <!-- Sección Cambio Climático -->
+      <section id="cambio-climatico" class="section">
+        <h2 class="section-title">
+          <i class="fas fa-globe-americas"></i> Cambio Climático
+        </h2>
+        <p>El cambio climático representa el mayor desafío del siglo XXI, un evento definitorio que marcará cómo viviremos en los próximos años. Según los reportes del IPCC, la temperatura mundial ha aumentado en 1.1°C desde el inicio de la revolución industrial, impulsado por la visión antropogénica de la emisión de gases de efecto invernadero.</p>
+        
+        <div class="highlight">
+          <p>El cambio climático es nuestro anatema como sociedad industrial, representa el punto de quiebre de las cadenas tróficas preestablecidas y un cambio en la permanencia de los hábitats. Sus impactos son tan severos que este trabajo no alcanzaría a describir la cantidad de efectos directos y colaterales de su accionar.</p>
+        </div>
+        
+        <p>Venezuela y la Región Guayana son extremadamente vulnerables. Las proyecciones indican un calentamiento que podría oscilar entre 2°C y 4°C para el año 2050, un escenario que augura consecuencias graves para la agricultura, la disponibilidad de agua potable y la salud humana en nuestro país y la región.</p>
+      </section>
+
+      <!-- Sección Huella de Carbono -->
+      <section id="huella-carbono" class="section">
+        <h2 class="section-title">
+          <i class="fas fa-shoe-prints"></i> Huella de Carbono
+        </h2>
+        <p>La huella de carbono es el indicador ambiental que mide la totalidad de gases de efecto invernadero (GEI) emitidos por efecto directo o indirecto de un individuo, organización, evento o producto. Se expresa en toneladas de CO₂ equivalente (tCO₂e).</p>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">1,500</div>
+            <div class="stat-label">Estudiantes en la población de estudio</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">3,000 m²</div>
+            <div class="stat-label">Infraestructura universitaria evaluada</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">3 fases</div>
+            <div class="stat-label">Corto, mediano y largo plazo</div>
+          </div>
+        </div>
+        
+        <p>Este proyecto diseña una hoja de ruta para reducir la huella de carbono de la Universidad Gran Mariscal de Ayacucho. Mediante un enfoque mixto que incluye inventario de emisiones, análisis de brechas y estudio de rutina en el plantel, se establece una línea base de emisiones y se proponen medidas concretas para:</p>
+        
+        <ul>
+          <li>Eficiencia lumínica en aulas y espacios comunes</li>
+          <li>Control solar pasivo para regulación térmica</li>
+          <li>Separación de residuos orgánicos e inorgánicos</li>
+          <li>Consumo eficiente de agua y energía</li>
+        </ul>
+      </section>
+
+      <!-- Sección Impacto -->
+      <section id="impacto" class="section">
+        <h2 class="section-title">
+          <i class="fas fa-exclamation-triangle"></i> Impacto
+        </h2>
+        <p>El cambio climático representa una amenaza crítica en Venezuela, generando impactos severos que no solo degradan ecosistemas y afectan nuestra salud, sino que también deterioran las condiciones de aprendizaje y, consecuentemente, el rendimiento académico en nuestras instituciones educativas.</p>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-title">Impactos Actuales</div>
+            <div class="timeline-content">Aumento de fenómenos climáticos extremos, noches más calurosas, plantas marchitándose a velocidad alarmante, y cuerpos de agua más cálidos con proliferación de algas.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Impactos en Educación</div>
+            <div class="timeline-content">Aulas sobrecalentadas que dificultan la concentración, interrupciones por eventos climáticos extremos, y aumento de enfermedades relacionadas con el calor que afectan la asistencia estudiantil.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Impactos Futuros (2050)</div>
+            <div class="timeline-content">Calentamiento de 2-4°C que afectará gravemente la agricultura, disponibilidad de agua potable, salud humana y, por extensión, la continuidad educativa en el país.</div>
+          </div>
+        </div>
+        
+        <p>Una investigación con iniciativa de la Academia de Ciencias Físicas, Matemáticas y Naturales de Venezuela advirtió sobre la ausencia de una política nacional de cambio climático y de un plan estructurado de adaptación y mitigación, lo que deja a nuestro país en una posición de alta exposición y baja resiliencia a nivel académico, laboral, social y humano.</p>
+      </section>
+
+      <!-- Sección Causas -->
+      <section id="causas" class="section">
+        <h2 class="section-title">
+          <i class="fas fa-industry"></i> Causas
+        </h2>
+        <p>Las causas del cambio climático son complejas y multifactoriales, pero la ciencia ha identificado claramente la influencia humana como principal impulsor del calentamiento global observado desde mediados del siglo XX.</p>
+        
+        <ul>
+          <li><strong>Emisión de gases de efecto invernadero:</strong> Principalmente dióxido de carbono (CO₂) procedente de la quema de combustibles fósiles (carbón, petróleo y gas natural), así como metano (CH₄) y óxido nitroso (N₂O).</li>
+          <li><strong>Deforestación y cambio de uso del suelo:</strong> La eliminación de bosques reduce la capacidad de absorción de CO₂ y libera el carbono almacenado en la vegetación.</li>
+          <li><strong>Agricultura intensiva:</strong> Emisiones de metano por la digestión del ganado y óxido nitroso por el uso de fertilizantes nitrogenados.</li>
+          <li><strong>Industrialización y consumo energético:</strong> Procesos industriales y generación de electricidad que dependen mayoritariamente de combustibles fósiles.</li>
+          <li><strong>Modelo económico lineal:</strong> Producción, consumo y descarte sin considerar la circularidad de los recursos ni los impactos ambientales.</li>
+        </ul>
+        
+        <p>Tal vez nuestro manejo despreocupado de los recursos naturales para nuestro beneficio sea parte del impulso de estos cambios, o tal vez, la Tierra está cambiando, cual un organismo, un ser vivo, reacciona a un cuerpo extraño en su interior que afecta su funcionamiento.</p>
+      </section>
+
+      <!-- Sección En la Universidad -->
+      <section id="universidad" class="section">
+        <h2 class="section-title">
+          <i class="fas fa-graduation-cap"></i> En la Universidad
+        </h2>
+        <p>Las universidades venezolanas, tanto públicas como privadas, deben ponerse en acción, servir como punto de partida, como canal de concientización y acción. Están llamadas a jugar un papel protagónico como centros de generación de conocimiento, investigación y formación de futuros profesionales del país.</p>
+        
+        <p>Sin embargo, la realidad es que la mayoría de las universidades venezolanas carecen de planes de acción climática, de inventarios de emisiones de carbono y de programas educativos que integren la sostenibilidad de manera transversal dentro de sus instituciones.</p>
+        
+        <div class="highlight">
+          <p>Este proyecto presenta un estudio de caso centrado en la universidad nororiental privada Gran Mariscal de Ayacucho. La institución, a pesar de contar con áreas verdes maduras en su exterior, no posee actualmente un plan de adaptación climática ni ha evaluado su impacto ambiental como centro educativo.</p>
+        </div>
+        
+        <h3>Beneficios Potenciales del Proyecto</h3>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value"><i class="fas fa-thermometer-half"></i></div>
+            <div class="stat-label">Mayor bienestar térmico en aulas</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value"><i class="fas fa-bolt"></i></div>
+            <div class="stat-label">Ahorro energético y económico</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value"><i class="fas fa-leaf"></i></div>
+            <div class="stat-label">Sostenibilidad institucional</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value"><i class="fas fa-users"></i></div>
+            <div class="stat-label">Fortalecimiento de redes estudiantil-universidad</div>
+          </div>
+        </div>
+        
+        <p>El plan es replicable y aporta un protocolo de inventario adaptado a la escasez de datos oficiales de la institución. Esto forma parte de un proyecto diseñado para concientizar en la Universidad del mismo nombre sobre el Cambio Climático.</p>
+      </section>
+
+      <!-- Enlace al proyecto completo -->
+      <div class="project-link-container">
+        <h3>Documento Completo del Proyecto</h3>
+        <p>Accede al estudio completo con la Propuesta, metodología, análisis de datos, propuestas de acción y proyecciones de reducción de emisiones.</p>
+        <a href="https://drive.google.com" target="_blank" class="project-link">
+          <i class="fab fa-google-drive"></i> disponible Proyecto Completo en Google Drive
+        </a>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--texto-claro);">
+          <i class="fas fa-info-circle"></i> Documento disponible para lectura y descarga
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="university-name">
+          Universidad nororiental Gran Mariscal de Ayacucho
+        </div>
+        <div>
+          Proyecto de Acción Climática - Hoja de Ruta para la Sostenibilidad Universitaria - Por: Juan Carlos Yepez Kepp
+        </div>
+        <div class="copyright">
+          © 2026 - 2027 - Estudio de caso: Cambio climático en Venezuela
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Interactividad básica para mejor UX
+    document.addEventListener('DOMContentLoaded', function() {
+      // Suavizar desplazamiento para enlaces internos
+      document.querySelectorAll('.key-section-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 20,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Resaltar sección actual al desplazarse
+      const sections = document.querySelectorAll('.section');
+      const navLinks = document.querySelectorAll('.key-section-link');
+      
+      function highlightCurrentSection() {
+        let currentSection = '';
+        const scrollPosition = window.scrollY + 100;
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = '#' + section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.style.background = '';
+          link.style.color = '';
+          
+          if (link.getAttribute('href') === currentSection) {
+            link.style.background = 'var(--amarillo)';
+            link.style.color = 'var(--azul-marino)';
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', highlightCurrentSection);
+      highlightCurrentSection(); // Llamada inicial
+      
+      // Animación para las tarjetas de estadísticas
+      const statCards = document.querySelectorAll('.stat-card');
+      const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      statCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>
