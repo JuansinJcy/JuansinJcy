@@ -4,14 +4,17 @@ Hola! 👋
 
 👀 Intereses:
 
-Aprendización automática
+Aprendizaje automática
 Desarrollo web con CSS y HTML5
 Nube (AWS, Google Cloud, Azure)
+Vibe Coding
+
 
 🌱 Actualmente aprendiendo:
 
-Python
+Python (Numpy, Panda, Scikit)
 HTML
+CSS
 C#
 C++
 IR
@@ -24,15 +27,16 @@ NotebookLM
 💞️ Colaboraciones:
 Él trabajó en proyectos personales interesantes como:
 
-Desarrollo de Agendas
+Desarrollo de Hojas de Ruta Climaticas
 Creación de modelos de IA
-Automatización de procesos
-Sostenibilidad Ambiental
-
+Automatización de procesos Industriales en entornos de mucha repeticion
+Promover la Sostenibilidad Ambiental
+LLM Local mediante la creacion de Algoritmos
 
 📫 Contáctame:
 
 Correo: juansin0611@gmail.com
+Linkedin: JUAN CARLOS YEPEZ KEPP
 😄 Pronombres:
 
 ÉL/ÉL
